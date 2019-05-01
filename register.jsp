@@ -1,20 +1,26 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>用户注册</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>用户注册</title>
 </head>
 <body>
-
-<h2 style="color: red">新用户注册</h2>
-
-${error}
-
-<form action="/register" method="post">
-    账号:<input type="text" value="zhangzhichao" name="name"><br/>
-    密码:<input type="password" value="chaochao" name="pwd"><br/>
-    手机:<input type="text" value="13500000000" name="phone"><br/>
-    <input type="submit" value="注册"><br/>
-</form>
-
+	<form action="${pageContext.request.contextPath }/user/regist.action">
+		<table border="1">
+			<tr>
+				<td>用户名</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input type="text" name="password"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="注册"></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
